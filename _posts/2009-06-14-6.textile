@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2009-06-15-6
+title: 2009-06-14-6
 permalink: 2009-06-15-6.html
 published: false
 author: Jack Danger Canty
