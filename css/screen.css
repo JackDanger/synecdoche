@@ -1,0 +1,140 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* Global Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  font-family: Helvetica, arial, clean, sans-serif;
+  font-size:   18px;
+  text-align: center;
+}
+
+a {
+  color: #00a;
+}
+
+a:hover {
+  color: black;
+}
+
+a:visited {
+  color: #a0a;
+}
+
+/*****************************************************************************/
+/*
+/* Home
+/*
+/*****************************************************************************/
+
+ul.posts {
+  list-style-type: none;
+  margin-bottom: 2em;
+  margin-left: 36%;
+}
+
+  ul.posts li {
+    line-height: 1.75em;
+  }
+
+  ul.posts span {
+    color: #aaa;
+    font-family: Tahoma;
+    font-size: 80%;
+  }
+
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
+
+.site {
+  text-align: justify;
+  width: 40em;
+  margin: 3em auto 2em auto;
+  line-height: 1.5em;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+  .site .title a {
+    color: green;
+    text-decoration: none;
+  }
+  
+  .site .title a:hover {
+    color: black;
+  }
+
+  .site .title a.extra {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 1em;
+  }
+  
+  .site .title a.extra:hover {
+    color: black;
+  }
+
+  .site .meta {
+    color: #aaa;
+  }
+
+  .site .footer {
+    font-size: 0.8em;
+    color: #666;
+    border-top: 4px solid #eee;
+    overflow: hidden;
+  }
+  
+    .site .footer a {
+      color: #8085C1;
+    }
+    .site .footer .left {
+      float: left;
+      margin-right: 3em;
+    }
+    .site .footer .right {
+      float: right;
+    }
+    
+/*****************************************************************************/
+/*
+/* Posts
+/*
+/*****************************************************************************/
+
+#post {
+  text-align: center;
+  font-size:  2em;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+  font-family: Palatino Linotype, Georgia, Lucida Grande;
+}
+
+#metadata.footer {
+  margin-top: 2em;
+  border-width: 0px;
+}
+span.by {
+  color: #999;
+}

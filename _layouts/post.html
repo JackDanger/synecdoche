@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div id="post">
+{{ content }}
+</div>
+<div id="metadata" class="footer">
+  <div class="left">
+    {{ page.date | date_to_long_string }}
+  </div>
+  <div class="right">
+    <span class="by">by</span> {{ page.author }}
+  </div>
+</div>
