@@ -4,10 +4,10 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  <title>Jack Danger's Synecdoche</title>
- <link href="http://synecdoche.com/atom.xml" rel="self"/>
- <link href="http://synecdoche.com/"/>
+ <link href="http://jackdanger.github.com/synecdoche/atom.xml" rel="self"/>
+ <link href="http://jackdanger.github.com/synecdoche/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://synecdoche.com/</id>
+ <id>http://jackdanger.github.com/synecdoche</id>
  <author>
    <name>Jack Danger Canty</name>
    <email>synecdoche@jackcanty.com</email>
