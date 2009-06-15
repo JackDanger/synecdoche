@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 2009-06-15
-permalink: 2009-06-16.html
+permalink: 2009-06-15.html
 published: true
 author: Jack Danger Canty
 ---
