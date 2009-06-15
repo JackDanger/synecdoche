@@ -16,14 +16,20 @@ task :update_published do
   end
 end
 
-desc "Create a new post, pass P='The Title' to name the new entry, pass YET=n to postdate by n days
+desc "Create a new post, pass P='The Title' to name the new entry, pass YET=n to postdate by n days"
 task :new do
   require 'activesupport'
-  postname = ENV['P']
   date     = Date.today
   date     = date + ENV['YET'].to_i if ENV['YET']
-  slug = postname.gsub(/[^a-z0-9\-_\+]+/i, '-').downcase.chomp("-")
-  post = "#{ROOT}/_posts/#{date.to_s}-#{slug}.textile"
+  if ENV['P']
+    postname = ENV['P']
+    slug = postname.gsub(/[^a-z0-9\-_\+]+/i, '-').downcase.chomp("-")
+  else
+    number = Dir.glob("#{ROOT}/_posts/#{date}*").size
+    postname = "#{date}-#{number}"
+    slug     = number
+  end
+  post = "#{ROOT}/_posts/#{date}-#{slug}.textile"
   File.open(post, 'w') do |f|
     f.write <<-EOS
 ---
