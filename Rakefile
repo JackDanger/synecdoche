@@ -16,7 +16,7 @@ task :update_published do
   end
 end
 
-desc "Create a new post, pass P='The Title' to name the new entry, pass YET=4 to postdate by 4 days"
+desc "Create a new post, pass P='The Title' to name the new entry, pass YET=n to postdate by n days
 task :new do
   require 'activesupport'
   postname = ENV['P']
