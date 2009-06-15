@@ -27,7 +27,7 @@ task :new do
   else
     number = Dir.glob("#{ROOT}/_posts/#{date}*").size
     postname = "#{date}-#{number}"
-    slug     = number
+    slug     = postname
   end
   post = "#{ROOT}/_posts/#{date}-#{slug}.textile"
   File.open(post, 'w') do |f|
