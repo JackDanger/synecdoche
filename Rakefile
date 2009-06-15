@@ -21,15 +21,16 @@ task :new do
   require 'activesupport'
   date     = Date.today
   date     = date + ENV['YET'].to_i if ENV['YET']
-  if ENV['P']
+  if ENV['P'] # custom title
     postname = ENV['P']
     slug = postname.gsub(/[^a-z0-9\-_\+]+/i, '-').downcase.chomp("-")
-  else
-    number = Dir.glob("#{ROOT}/_posts/#{date}*").size
+    post = "#{ROOT}/_posts/#{date}-#{slug}.textile"
+  else # auto-incrementing title
+    number   = Dir.glob("#{ROOT}/_posts/#{date}*").size
     postname = "#{date}-#{number}"
     slug     = postname
+    post     = "#{ROOT}/_posts/#{postname}.textile"
   end
-  post = "#{ROOT}/_posts/#{date}-#{slug}.textile"
   File.open(post, 'w') do |f|
     f.write <<-EOS
 ---
