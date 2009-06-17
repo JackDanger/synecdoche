@@ -16,6 +16,23 @@ task :update_published do
   end
 end
 
+desc "work around for crappy-ass pages.github change"
+task :doublespace do
+  require 'rubygems'
+  require 'active_support'
+  entries.each do |post|
+    sections = File.read(post).split('---')
+    lines = sections.pop.split("\n")
+    newlines = []
+    lines.each do |line|
+      newlines << line
+      newlines << ''
+    end
+    sections << newlines.join("\n")
+    File.open(post, 'w') {|f| f.write sections.join("---")}
+  end
+end
+
 desc "Create a new post, pass P='The Title' to name the new entry, pass YET=n to postdate by n days"
 task :new do
   require 'activesupport'
