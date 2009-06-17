@@ -6,6 +6,10 @@ published: true
 author: Jack Danger Canty
 ---
 
+
+
 A box of kittens
+
 leaves us no room to question
+
 the purpose of life

@@ -6,6 +6,10 @@ published: true
 author: Jack Danger Canty
 ---
 
+
+
 We read the bible
+
 both to see the road ahead
+
 and to mourn the past

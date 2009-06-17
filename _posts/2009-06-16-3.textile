@@ -6,6 +6,10 @@ published: true
 author: Jack Danger Canty
 ---
 
+
+
 when I mourn the things
+
 that I have failed to become
+
 then my God grows near
