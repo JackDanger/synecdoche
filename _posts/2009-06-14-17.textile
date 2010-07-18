@@ -2,7 +2,7 @@
 layout: post
 title: 2009-06-14-17
 permalink: 2009-06-14-17.html
-published: false
+published: true
 author: Jack Danger Canty
 ---
 

@@ -35,7 +35,7 @@ end
 
 desc "Create a new post, pass P='The Title' to name the new entry, pass YET=n to postdate by n days"
 task :new do
-  require 'activesupport'
+  require 'active_support'
   date     = Date.today
   date     = date + ENV['YET'].to_i if ENV['YET']
   if ENV['P'] # custom title
