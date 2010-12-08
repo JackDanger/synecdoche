@@ -9,6 +9,7 @@ desc "Update the 'published' bit in posts if the post date is today or earlier"
 task :update_published do
   require 'rubygems'
   require 'active_support'
+  require 'date'
   entries.each do |post|
     date = Date.parse(post.scan(/_posts\/(\d{4}-\d{2}-\d{2})/).flatten.first)
     updated = File.read(post).sub(/^published: (false|true)$/, "published: #{(date <= Date.today).to_s}")
@@ -35,7 +36,9 @@ end
 
 desc "Create a new post, pass P='The Title' to name the new entry, pass YET=n to postdate by n days"
 task :new do
+  require 'rubygems'
   require 'active_support'
+  require 'date'
   date     = Date.today
   date     = date + ENV['YET'].to_i if ENV['YET']
   if ENV['P'] # custom title
